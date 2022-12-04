@@ -1,0 +1,31 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: koajs-app
+  name: koajs-deployment
+  namespace: default
+spec:
+  clusterIP: 10.107.53.204
+  clusterIPs:
+  - 10.107.53.204
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32555
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: koajs-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
