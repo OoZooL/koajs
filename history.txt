@@ -1,0 +1,44 @@
+  663  mv ../my-koa-app.js .
+  666  docker build -t koajsapp .
+  667  docker images
+  668  kubectl apply -f deployment.yml 
+  669  kubectl get pods
+  670  docker ps
+  671  kubectl delete deployment koajs-deployment
+  672  kubectl apply -f deployment.yml 
+  673  kubectl describe pods
+  674  kubectl expose deployment koajs-deployment --type=NodePort --name=example-service
+  675  kubectl get service
+  677  kubectl describe service example-service
+  678  kubectl get pods --output=wide 
+  679  ifconfig | grep 10.
+  680  ifconfig | grep 172.
+  681  ping 172.17.0.5
+  682  telnet 172.17.0.5 3000
+  683  telnet 172.17.0.5 30402
+  684  kubectl describe service example-service
+  686  kubectl get pods --output=wide 
+  687  kubectl delete service example-service
+  688  kubectl expose deployment koajs-deployment --type=NodePort --port=3000 
+  689  minikube service koajs-deploymet --url 
+  690  kubectl get service
+  691  minikube service koajs-deployment --url 
+  693  kubectl describe service koajs-deployment
+  694  kubectl edit service koajs-deployment
+  696  vim service.yml 
+  697  vim deployment.yml 
+  698  git init
+  699  git add -A
+  700  git status
+  701  git commit -m "Initial commit"
+  702  git config --global user.email "korlortar@bezeqint.net"
+  703  git config --global user.name "Doron Volkovich"
+  704  git commit -a -m "Initial commit"
+  705  git push -u origin main
+  706  git branch -M main
+  707  git remote add origin https://github.com/OoZooL/koajs.git
+  708  git push -u origin main
+  709  vim ../veracity_uncle_PAT.txt
+  710  vim deployment.yml 
+  711  vim persistent-storage.yml
+  712  history | tail -n 50 > history.txt
